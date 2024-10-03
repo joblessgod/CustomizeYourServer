@@ -1,1 +1,119 @@
-asdasd
+header-footer:
+  enabled: true
+  header:
+  - ''
+  - ' &7(&6🔥&7) %animation:jlg_studio% &7(&6🔥&7) '
+  - ''
+  footer:
+  - ''
+  - ' You are connected to &6hub &fwith &6%online% &fplayers '
+  - ' &fGlobally there are &6%online% &fplayers connected'
+  - ''
+  - '&cStore: &fstore.jobless.god'
+  - '#00A4F4Discord: &fDiscord.gg/joblessgod'
+  disable-condition: '%world%=disabledworld'
+tablist-name-formatting:
+  enabled: true
+  anti-override: true
+  disable-condition: '%world%=disabledworld'
+scoreboard-teams:
+  enabled: true
+  enable-collision: true
+  invisible-nametags: false
+  anti-override: true
+  sorting-types:
+  - GROUPS:joblessgod,owner,admin,mod,helper,builder,vip,verified,default
+  - PLACEHOLDER_A_TO_Z:%player%
+  case-sensitive-sorting: true
+  can-see-friendly-invisibles: false
+  disable-condition: '%world%=disabledworld'
+  unlimited-nametag-mode:
+    enabled: false
+playerlist-objective:
+  enabled: true
+  value: '%ping%'
+  fancy-value: '&7Ping: %ping%'
+  disable-condition: '%world%=disabledworld'
+belowname-objective:
+  enabled: true
+  number: '%health%'
+  text: '&cHealth'
+  fancy-display-players: '&c%health%'
+  fancy-display-default: NPC
+  disable-condition: '%world%=disabledworld'
+prevent-spectator-effect:
+  enabled: true
+scoreboard:
+  enabled: true
+  toggle-command: /scoreboardtoggle
+  remember-toggle-choice: false
+  hidden-by-default: false
+  use-numbers: true
+  static-number: 1
+  delay-on-join-milliseconds: 0
+  respect-other-plugins: true
+  scoreboards:
+    scoreboard:
+      title: '%animation:jlg_studio%'
+      lines:
+      - '&7⌚ %world_time_world% | %server_time_dd/MM/YYY%'
+      - ''
+      - '&c☄ &fPlayer: &c%player%'
+      - '&9✎ &fRank:%luckperms_prefix%'
+      - ''
+      - '&a&l₹ &fMoney: &a₹&a%vault_eco_balance_formatted%'
+      - '&e⛃ &fCoins: &e10 || %playerpoints_points_formatted%'
+      - '&c&l💀 &fK/D: &c%statistic_player_kills%&f/&c%statistic_deaths%'
+      - '&a📊 &fAchievements: &e%progress_bar_{Advancements_completedAmount}_m:10%'
+      - ''
+      - '&b✂ &fPlaytime: &b%statistic_time_played:hours%&7h&b%statistic_time_played:minutes%&7m&b%statistic_time_played:seconds%&7s'
+      - '&3⭐ &fVote: &31m/1t'
+      - '&a⚡ &fOnline: &a%online%'
+      - ''
+      - '    %animation:jlg_studio%'
+placeholders:
+  date-format: dd.MM.yyyy
+  time-format: '[HH:mm:ss / h:mm a]'
+  time-offset: 0
+  register-tab-expansion: true
+conditions:
+  nick:
+    conditions:
+    - '%player%=%essentials_nickname%'
+    true: '%player%'
+    false: ~%essentials_nickname%
+placeholderapi-refresh-intervals:
+  default-refresh-interval: 500
+  '%server_uptime%': 1000
+  '%server_tps_1_colored%': 1000
+  '%server_unique_joins%': 5000
+  '%player_health%': 200
+  '%player_ping%': 1000
+  '%vault_prefix%': 1000
+  '%rel_factionsuuid_relation_color%': 1000
+assign-groups-by-permissions: false
+primary-group-finding-list:
+- joblessgod
+- Owner
+- Admin
+- Mod
+- Helper
+- jr.helper
+- verified
+- default
+debug: false
+use-bukkit-permissions-manager: false
+use-online-uuid-in-tablist: true
+permission-refresh-interval: 1000
+mysql:
+  enabled: false
+ping-spoof:
+  enabled: false
+bossbar:
+  enabled: false
+per-world-playerlist:
+  enabled: false
+layout:
+  enabled: false
+global-playerlist:
+  enabled: false
